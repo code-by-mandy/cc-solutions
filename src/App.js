@@ -20,11 +20,11 @@ function App() {
     });
   }, []);
   
-  const handleInput = (e) =>{
+  const handleSearch = (e) =>{
 
     let regex = new RegExp(e.target.value.toLowerCase());
 
-    const filteredArray = solutions.filter(solution => solution.solution.toLowerCase().match(regex));
+    const filteredArray = solutions.filter(solution => solution.solution.toLowerCase().match(regex) || solution.sectors.toLowerCase().match(regex));
     setFiltered(filteredArray);
   }
 
@@ -36,12 +36,12 @@ function App() {
         <p>All data from the Drawdown Project.</p>
         <form>
             <label htmlFor="search">Search:</label>
-            <input id="search" type="search" onKeyUp={handleInput}></input>
+            <input id="search" type="search" onKeyUp={handleSearch}></input>
         </form>
         <form>
           <div>
             <label htmlFor="sector">Area of Action</label>
-            <select id="action">
+            <select id="action" onChange={handleSearch}>
               <option defaultValue>All</option>
               <option>Buildings</option>
               <option>Electricity</option>
