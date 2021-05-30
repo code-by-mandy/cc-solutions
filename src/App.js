@@ -24,10 +24,9 @@ function App() {
 
     let regex = new RegExp(e.target.value.toLowerCase());
 
-    const filteredArray = solutions.filter(solution => solution.solution.toLowerCase().match(regex) || solution.sectors.toLowerCase().match(regex));
+    const filteredArray = solutions.filter(solution => solution.solution.toLowerCase().match(regex) || solution.category.match(regex));
     setFiltered(filteredArray);
   }
-
 
   return (
     <div>
@@ -39,24 +38,23 @@ function App() {
             <input id="search" type="search" onKeyUp={handleSearch}></input>
         </form>
         <form>
-          <div>
-            <label htmlFor="sector">Area of Action</label>
-            <select id="action" onChange={handleSearch}>
-              <option defaultValue>All</option>
-              <option>Buildings</option>
-              <option>Electricity</option>
-              <option>Food, Agriculture, and Land Use</option>
-              <option>Health and Education</option>
-              <option>Industry</option>
-              <option>Sinks</option>
-              <option>Transportation</option>
-            </select>
-          </div>          
+          <label htmlFor="categories">Filter by category</label>
+          <select id="categories">
+            <option defaultValue>Choose one:</option>
+            <option>Buildings</option>
+            <option>Cities</option>
+            <option>Energy</option>
+            <option>Food</option>
+            <option>Land</option>
+            <option>Materials</option>
+            <option>Transport</option>
+            <option>Women</option>
+          </select>
         </form>
         <ul>
           { filtered.map( solution => {
             return(
-              <li key={solutions.indexOf(solution)}>{solution.solution}</li>
+              <li key={solutions.indexOf(solution)}><a href={solution.url}>{solution.solution}</a></li>
             )
           })}
         </ul>
