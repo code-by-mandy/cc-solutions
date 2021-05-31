@@ -14,11 +14,13 @@ const Row = ({category, solutions}) => {
     }, [solutions, category]);
     
     return (
-        <ul>
+        <ul className="row">
             {
                 rowSolutions.map( rowSol => {
                     return (
-                        <li key={rowSol.solution}>{rowSol.solution}</li>
+                        <li key={rowSol.solution} className="rowItem">
+                            <a href={rowSol.url} target="_blank" rel="noopener noreferrer">{rowSol.solution}</a>
+                        </li>
                     )
                 })
             }      

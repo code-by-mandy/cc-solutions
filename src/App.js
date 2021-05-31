@@ -40,20 +40,24 @@ function App() {
   
   return (
     <div>
-      <div>
-        <h1>Filter solutions identified by the Drawdown Project!</h1>
-        <p>All data from the Drawdown Project.</p>
-        
-        <Form search = {(input) => setSearchString(input)}/>
-          
-        <div>
-          { 
-            searchString === "" ? <h2>All solutions:</h2>  
-            : <h2>Search results for "{searchString}":</h2>
-          }
-          <Results solutions = {filtered} />        
-        </div>  
-      </div>      
+      <header> 
+        <div className="wrapper">
+          <h1>Climate Change Solutions</h1>
+          <p>Learn more about climate change solutions identified by the <a href="https://drawdown.org/" target="_blank" rel="noopener noreferrer">Drawdown Project</a>.</p>
+        </div>
+      </header>
+      <main>
+        <div className="wrapper">
+          <Form search={(input) => setSearchString(input)}/>        
+          <section>
+            { 
+              searchString === "" ? <h2>All solutions:</h2>  
+              : <h2>Search results for "{searchString}":</h2>
+            }
+            <Results solutions={filtered} />        
+          </section>
+        </div>        
+      </main>      
     </div>
   );
 }

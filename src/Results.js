@@ -11,8 +11,8 @@ const Results = ({solutions}) => {
         let filteredCategories = [];
 
         solutions.forEach((solution => {
-            categoryArray.push(solution.category);
-        }))
+            categoryArray.push(solution.category);            
+        }))  
 
         categoryArray.sort();
 
@@ -22,7 +22,6 @@ const Results = ({solutions}) => {
                 categoryValue = category;
             }
         })
-
         setCategories(filteredCategories);
         
     }, [solutions])
@@ -34,7 +33,7 @@ const Results = ({solutions}) => {
                     category => {
                         return (
                             <li key={category}>
-                                {category}
+                                <h3>{category}</h3>
                                 <Row category={category} solutions={solutions}/>
                             </li>                            
                         )
