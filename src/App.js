@@ -39,11 +39,11 @@ function App() {
   }, [searchString, solutions])
   
   return (
-    <div>
+    <div className="bodyWrapper">
       <header> 
         <div className="wrapper">
           <h1>Climate Change Solutions</h1>
-          <p>Learn more about climate change solutions identified by the <a href="https://drawdown.org/" target="_blank" rel="noopener noreferrer">Drawdown Project</a>.</p>
+          <p>Learn more about climate change solutions identified by the <a href="https://drawdown.org/" target="_blank" rel="noopener noreferrer">Drawdown Project</a>!</p>
         </div>
       </header>
       <main>
@@ -57,7 +57,12 @@ function App() {
             <Results solutions={filtered} />        
           </section>
         </div>        
-      </main>      
+      </main>   
+      <footer>
+        <div className="wrapper">
+          <p>Created by Mandy Poon for practising ReactJS. No affiliation with the Drawdown Project other than thinking they are awesome and wanting to spread word of their awesome work!</p>
+        </div>        
+      </footer>   
     </div>
   );
 }

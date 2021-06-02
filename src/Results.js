@@ -27,7 +27,7 @@ const Results = ({solutions}) => {
     }, [solutions])
 
     return (    
-        <ul>
+        <ul className="categoryList">
             {
                 categories.map(
                     category => {

@@ -14,17 +14,25 @@ const Row = ({category, solutions}) => {
     }, [solutions, category]);
     
     return (
-        <ul className="row">
-            {
-                rowSolutions.map( rowSol => {
-                    return (
-                        <li key={rowSol.solution} className="rowItem">
-                            <a href={rowSol.url} target="_blank" rel="noopener noreferrer">{rowSol.solution}</a>
-                        </li>
-                    )
-                })
-            }      
-        </ul>
+        <div className="rowWrapper">
+            <ul className="row">
+                {
+                    rowSolutions.map( rowSol => {
+                        return ( 
+                            <div className="solutionWrapper">
+                                <a href={rowSol.url} key={`${rowSol.category} ${rowSol.solution}`} target="_blank" rel="noopener noreferrer" className="rowItem">
+                                    <li>{rowSol.solution}</li>
+                                </a>
+                            </div>                      
+                        )
+                    })
+                }
+            </ul>
+            <div>
+                <button className="prev button">Prev</button>
+                <button className="next button">Next</button>
+            </div>            
+        </div>
     )
 }
 
