@@ -30,7 +30,7 @@ const Results = ({solutions}) => {
         <ul className="categoryList">
             {   
                 categories.length === 0 ?
-                <li className="noResults">Hmmm... looks like we have no search results. Try again with a different search term?</li> :
+                <li className="noResults">Hmmm... looks like we have no search results. Try again with a different search term!</li> :
                 categories.map(
                     category => {
                         return (
