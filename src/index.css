@@ -30,10 +30,6 @@ body {
   width: 100%;
 }
 
-main {
-  min-height: calc(100vh - 336px);
-}
-
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
@@ -56,7 +52,7 @@ header p, footer p:last-child {
 footer {
   background-color: #444;
   color: #fff;
-  padding: 40px 0;
+  padding: 40px 30px;
   text-align: center;
 }
 
@@ -91,13 +87,14 @@ form input {
   margin-top: 1px;
   margin-left: 1px;
   background-color: #fff;
-  padding: 0.82em 0.5em 0.75em;
+  padding: 0.75em 0.5em;
   border-radius: 12px 0 0 12px;
 }
 
 .searchIcon > img {
   width: 2.5em;
   height: 2.5em;
+  padding-top: 0.5em;
 }
 
 h3 {
@@ -142,10 +139,28 @@ ul {
   }
 }
 
+@media (min-width: 32em) {
+  
+  main {
+    min-height: calc(100vh - 322px);
+  }
+}
+
+@media (min-width: 37em) {  
+
+  main {
+    min-height: calc(100vh - 299px);
+  }
+}
+
 @media (min-width: 48em) {
 
   .bodyWrapper {
     margin: 0;
+  }
+  
+  main {
+    min-height: calc(100vh - 276px);
   }
 
   .solutionWrapper {
@@ -163,9 +178,10 @@ ul {
 
 @media (min-width: 72em) {
 
-  header {
+  header, footer {
     padding: 30px 0;
   }
+
   .results {
     margin: 0;
   }
