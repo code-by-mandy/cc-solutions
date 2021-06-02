@@ -81,6 +81,10 @@ ul {
   list-style: none;
 }
 
+.categoryList {
+  margin: 30px 0 40px;
+}
+
 .results {
   margin: 0 30px;
 }
