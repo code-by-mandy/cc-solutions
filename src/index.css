@@ -17,34 +17,78 @@ body {
   width: 100%;
 }
 
-.bodyWrapper {
-  margin: 3em;
-}
-
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
 }
 
 header {
-  margin-top: 3em;
+  padding: 60px 0 40px 0;
+  background-color: #444;
+  color: #fff;
+}
+
+header p, footer p:last-child {
+  margin-top: 10px;
 }
 
 footer {
-  margin-bottom: 3em;
+  background-color: #444;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.search {
+  background-color: #444;
+  padding: 10px 0;
+  margin: 0 0 30px 0;
+}
+
+.line {
+  width: 5%;
+  border-top: 1px solid #fff;
+}
+
+form[name=search] {
+  margin: 40px 0;
+  width: 100%;
+}
+
+form > div {
+  display: flex;
+}
+
+form label {
+  margin-right: 5px;
+  color: white;
+  font-size: 2em;
+}
+
+form input {
+  padding: 5px;
+  border-radius: 12px;
+  border: 1px solid grey;
+  font-size: 2em;
 }
 
 h3 {
   text-transform: capitalize;
+  margin: 15px 0;
 }
 
 ul {
   list-style: none;
 }
 
+.results {
+  margin: 0 30px;
+}
+
 .row {
   overflow-x: hidden;
   display: flex;
+  margin-bottom: 30px;
 }
 
 .solutionWrapper {
@@ -57,16 +101,20 @@ ul {
   padding: 15px;
   width: 100%;
   height: 100%;
-  
 }
 
 @media (min-width: 22em) {
+
   .solutionWrapper {
     width: 50%;
   }
 }
 
 @media (min-width: 48em) {
+
+  .bodyWrapper {
+    margin: 0;
+  }
 
   .solutionWrapper {
     width: 33%;
@@ -78,5 +126,11 @@ ul {
 
   .button {
     display: none;
+  }
+}
+
+@media (min-width: 72em) {
+  .results {
+    margin: 0;
   }
 }

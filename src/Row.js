@@ -16,7 +16,7 @@ const Row = ({category, solutions}) => {
     return (
         <div className="rowWrapper">
             <ul className="row">
-                {
+                {   
                     rowSolutions.map( rowSol => {
                         return ( 
                             <div className="solutionWrapper">

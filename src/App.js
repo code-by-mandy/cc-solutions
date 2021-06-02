@@ -43,13 +43,13 @@ function App() {
       <header> 
         <div className="wrapper">
           <h1>Climate Change Solutions</h1>
-          <p>Learn more about climate change solutions identified by the <a href="https://drawdown.org/" target="_blank" rel="noopener noreferrer">Drawdown Project</a>!</p>
+          <p>Learn more about climate change solutions identified by <a href="https://drawdown.org/" target="_blank" rel="noopener noreferrer">Project Drawdown</a>!</p>
         </div>
       </header>
       <main>
+        <Form search={(input) => setSearchString(input)}/>  
         <div className="wrapper">
-          <Form search={(input) => setSearchString(input)}/>        
-          <section>
+          <section className="results">
             { 
               searchString === "" ? <h2>All solutions:</h2>  
               : <h2>Search results for "{searchString}":</h2>
@@ -60,7 +60,8 @@ function App() {
       </main>   
       <footer>
         <div className="wrapper">
-          <p>Created by Mandy Poon for practising ReactJS. No affiliation with the Drawdown Project other than thinking they are awesome and wanting to spread word of their awesome work!</p>
+          <p>Created by Mandy Poon to practice ReactJS.</p>
+          <p>No affiliation with the Project other than thinking they are awesome and wanting to spread word of their work!</p>
         </div>        
       </footer>   
     </div>
