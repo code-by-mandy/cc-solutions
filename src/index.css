@@ -118,9 +118,6 @@ ul {
   overflow-x: hidden;
   display: flex;
   margin-bottom: 30px;
-}
-
-.solutionWrapper {
   width: 100%;
 }
 
@@ -163,7 +160,7 @@ ul {
     min-height: calc(100vh - 276px);
   }
 
-  .solutionWrapper {
+  .rowItem {
     width: 33%;
   }
 

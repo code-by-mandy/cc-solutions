@@ -36,7 +36,10 @@ const Results = ({solutions}) => {
                         return (
                             <li key={category}>
                                 <h3>{category}</h3>
-                                <Row category={category} solutions={solutions}/>
+                                <Row 
+                                    category={category} 
+                                    solutions={solutions}
+                                />
                             </li>                            
                         )
                     }

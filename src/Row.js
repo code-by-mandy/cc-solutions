@@ -19,11 +19,15 @@ const Row = ({category, solutions}) => {
                 {   
                     rowSolutions.map( rowSol => {
                         return ( 
-                            <div className="solutionWrapper">
-                                <a href={rowSol.url} key={`${rowSol.category} ${rowSol.solution}`} target="_blank" rel="noopener noreferrer" className="rowItem">
-                                    <li>{rowSol.solution}</li>
-                                </a>
-                            </div>                      
+                            <a 
+                                href={rowSol.url} 
+                                key={`${rowSol.category} ${rowSol.solution}`} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="rowItem"
+                            >
+                                <li>{rowSol.solution}</li>
+                            </a>
                         )
                     })
                 }
